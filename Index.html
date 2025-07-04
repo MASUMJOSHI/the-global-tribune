@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Global Tribune</title>
+  <link rel="stylesheet" href="style.css">
+</head><body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">The Global Tribune</h1>
+      <div class="lang-toggle">
+        <button onclick="setLang('en')">English</button>
+        <button onclick="setLang('hi')">हिंदी</button>
+      </div>
+    </div>
+  </header>  <section class="headline-ticker">
+    <marquee behavior="scroll" direction="left">
+      Breaking: Bullet train construction picks up speed in Gujarat... | गुजरात में बुलेट ट्रेन का कार्य तेज़ी से प्रगति पर...
+    </marquee>
+  </section>  <nav class="nav-bar">
+    <ul>
+      <li><a href="#">Top News</a></li>
+      <li><a href="#">Politics</a></li>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Sports</a></li>
+      <li><a href="#">World</a></li>
+    </ul>
+  </nav>  <main class="content">
+    <section class="main-news">
+      <h2 data-en="Top News" data-hi="मुख्य समाचार">Top News</h2>
+      <article class="news-card">
+        <img src="https://via.placeholder.com/600x300" alt="News Image">
+        <h3 data-en="New Education Policy Released" data-hi="नई शिक्षा नीति जारी">New Education Policy Released</h3>
+        <p data-en="The government unveiled a transformative policy to reshape the education landscape in India." data-hi="सरकार ने भारत में शिक्षा प्रणाली को बदलने के लिए एक नई नीति जारी की है।">
+          The government unveiled a transformative policy to reshape the education landscape in India.
+        </p>
+      </article>
+    </section><aside class="sidebar">
+  <h2 data-en="Trending" data-hi="ट्रेंडिंग">Trending</h2>
+  <ul>
+    <li data-en="India wins Asia Cup 2025" data-hi="भारत ने एशिया कप 2025 जीता">India wins Asia Cup 2025</li>
+    <li data-en="ISRO launches new satellite" data-hi="ISRO ने नया उपग्रह लॉन्च किया">ISRO launches new satellite</li>
+    <li data-en="Stock market hits record high" data-hi="शेयर बाजार नई ऊंचाई पर पहुँचा">Stock market hits record high</li>
+  </ul>
+</aside>
+
+  </main>  <section class="newsletter">
+    <h2 data-en="Subscribe for Updates" data-hi="अपडेट्स के लिए सब्सक्राइब करें">Subscribe for Updates</h2>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>  <footer class="footer">
+    <p>&copy; 2025 The Global Tribune | All rights reserved</p>
+  </footer>  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script></body></html>
