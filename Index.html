@@ -1,60 +1,40 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Global Tribune</title>
-  <link rel="stylesheet" href="style.css">
-</head><body>
-  <header class="main-header">
-    <div class="container">
-      <h1 class="logo">The Global Tribune</h1>
-      <div class="lang-toggle">
-        <button onclick="setLang('en')">English</button>
-        <button onclick="setLang('hi')">हिंदी</button>
-      </div>
-    </div>
-  </header>  <section class="headline-ticker">
-    <marquee behavior="scroll" direction="left">
-      Breaking: Bullet train construction picks up speed in Gujarat... | गुजरात में बुलेट ट्रेन का कार्य तेज़ी से प्रगति पर...
-    </marquee>
-  </section>  <nav class="nav-bar">
-    <ul>
-      <li><a href="#">Top News</a></li>
-      <li><a href="#">Politics</a></li>
-      <li><a href="#">Technology</a></li>
-      <li><a href="#">Sports</a></li>
-      <li><a href="#">World</a></li>
-    </ul>
-  </nav>  <main class="content">
-    <section class="main-news">
-      <h2 data-en="Top News" data-hi="मुख्य समाचार">Top News</h2>
-      <article class="news-card">
-        <img src="https://via.placeholder.com/600x300" alt="News Image">
-        <h3 data-en="New Education Policy Released" data-hi="नई शिक्षा नीति जारी">New Education Policy Released</h3>
-        <p data-en="The government unveiled a transformative policy to reshape the education landscape in India." data-hi="सरकार ने भारत में शिक्षा प्रणाली को बदलने के लिए एक नई नीति जारी की है।">
-          The government unveiled a transformative policy to reshape the education landscape in India.
-        </p>
-      </article>
-    </section><aside class="sidebar">
-  <h2 data-en="Trending" data-hi="ट्रेंडिंग">Trending</h2>
-  <ul>
-    <li data-en="India wins Asia Cup 2025" data-hi="भारत ने एशिया कप 2025 जीता">India wins Asia Cup 2025</li>
-    <li data-en="ISRO launches new satellite" data-hi="ISRO ने नया उपग्रह लॉन्च किया">ISRO launches new satellite</li>
-    <li data-en="Stock market hits record high" data-hi="शेयर बाजार नई ऊंचाई पर पहुँचा">Stock market hits record high</li>
-  </ul>
-</aside>
+/* style.css for The Global Tribune */
 
-  </main>  <section class="newsletter">
-    <h2 data-en="Subscribe for Updates" data-hi="अपडेट्स के लिए सब्सक्राइब करें">Subscribe for Updates</h2>
-    <form>
-      <input type="email" placeholder="Enter your email">
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>  <footer class="footer">
-    <p>&copy; 2025 The Global Tribune | All rights reserved</p>
-  </footer>  <script>
-    function setLang(lang) {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerText = el.getAttribute(`data-${lang}`);
-      });
-    }
-  </script></body></html>
+body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #222; }
+
+.container { width: 95%; max-width: 1200px; margin: auto; padding: 1rem; }
+
+header { background-color: #fff; border-bottom: 3px solid #d32f2f; padding: 1rem 0; }
+
+header h1 { margin: 0; color: #d32f2f; font-size: 2rem; font-weight: 800; text-transform: uppercase; }
+
+nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: 1rem 0 0 0; }
+
+nav li { margin-right: 1rem; font-weight: 600; cursor: pointer; }
+
+nav li:hover { color: #d32f2f; }
+
+.ticker { background-color: #d32f2f; color: #fff; padding: 0.5rem; font-weight: 600; font-size: 0.95rem; }
+
+main { padding: 2rem 0; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+.card { background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07); transition: 0.3s ease; }
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+
+.card img { width: 100%; height: 200px; object-fit: cover; }
+
+.card-content { padding: 1rem; }
+
+.card-content h2 { font-size: 1.2rem; color: #d32f2f; margin: 0 0 0.5rem 0; }
+
+.card-content p { font-size: 0.95rem; line-height: 1.4; margin-bottom: 1rem; }
+
+.card-content a { display: inline-block; color: #fff; background-color: #d32f2f; padding: 0.5rem 1rem; text-decoration: none; border-radius: 5px; font-size: 0.9rem; font-weight: 600; }
+
+.card-content a:hover { background-color: #b71c1c; }
+
+footer { background-color: #222; color: #fff; text-align: center; padding: 1rem 0; font-size: 0.85rem; }
+
